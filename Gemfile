@@ -27,6 +27,7 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'google-cloud-vision'
+gem 'carrierwave', '1.2.2'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
