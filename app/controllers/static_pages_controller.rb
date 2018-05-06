@@ -12,7 +12,7 @@ class StaticPagesController < ApplicationController
     project_id = "my-mojiokoshi"
 
     # Instantiates a client
-    vision = Google::Cloud::Vision.new project: project_id
+    vision = Google::Cloud::Vision.new(project: project_id, keyfile: Rails.application.credentials.google_service_account[:path])
 
     # The name of the image file to annotate
     file_name = params[:document][:image].tempfile.path
