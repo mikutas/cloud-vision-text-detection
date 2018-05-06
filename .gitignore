@@ -31,3 +31,6 @@
 
 # Ignore local gems
 /vendor/bundle
+
+# Ignore GCP service account key
+/config/*.json
