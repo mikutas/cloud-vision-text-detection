@@ -2,6 +2,6 @@
 <p>Find me in app/views/static_pages/input.html.erb</p>
 
 <%= form_for @document, url: '/result' do |f| %>
-  <%= f.file_field :image %><br>
+  <%= f.file_field :image, required: true %><br>
   <%= f.submit '文字起こしする' %>
 <% end %>
