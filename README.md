@@ -10,6 +10,8 @@ Things you may want to cover:
 * System dependencies
 
 * Configuration
+  * https://cloud.google.com/vision/docs/common/auth?hl=ja
+  * https://cloud.google.com/vision/docs/libraries?hl=ja#client-libraries-usage-ruby
 
 * Database creation
 
