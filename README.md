@@ -1,26 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Railsアプリとしては単純で
 
-Things you may want to cover:
+* 画像アップロードフォームを設置したページ
+* 画像から読み取った文字列を表示するページ
 
-* Ruby version
+があるだけ。
 
-* System dependencies
+画像から文字を読み取るのはGoogle Cloud Vision APIにやってもらう。Ruby用のクライアントライブラリがあるのでGemfileに書けばよい。
 
-* Configuration
-  * https://cloud.google.com/vision/docs/common/auth?hl=ja
-  * https://cloud.google.com/vision/docs/libraries?hl=ja#client-libraries-usage-ruby
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+また、GCPでプロジェクトを用意し、Cloud Vision API用のサービスアカウントを作成し、鍵をリポジトリのどこかに置いておく（.gitignoreに追加する）。ライブラリのコードを呼び出す際に鍵のパスが必要だが、このリポジトリではパスの直書きを回避するのにEncrypted Credentialsを使っている。
