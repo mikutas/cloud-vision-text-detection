@@ -1,5 +1,5 @@
-<h1>StaticPages#input</h1>
-<p>Find me in app/views/static_pages/input.html.erb</p>
+<h1>画像の入力</h1>
+<p>フォームから文字起こししたい画像をアップロードしてください。</p>
 
 <%= form_for @document, url: '/result' do |f| %>
   <%= f.file_field :image, required: true %><br>
