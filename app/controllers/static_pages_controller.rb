@@ -8,16 +8,22 @@ class StaticPagesController < ApplicationController
   end
 
   def result
-    # Your Google Cloud Platform project ID
-    project_id = "my-mojiokoshi"
-
     # Instantiates a client
-    vision = Google::Cloud::Vision.new(project: project_id, keyfile: Rails.application.credentials.google_service_account[:path])
+    image_annotator = Google::Cloud::Vision::ImageAnnotator.new(
+      version: :v1,
+      credentials: JSON.parse(Rails.application.credentials.google_service_account[:json])
+    )
 
     # The name of the image file to annotate
     file_name = params[:document][:image].tempfile.path
 
-    # Performs label detection on the image file
-    @result = vision.image(file_name).document
+    response = image_annotator.document_text_detection image: file_name
+    text = ''
+    response.responses.each do |res|
+      res.text_annotations.each do |annotation|
+        text << annotation.description
+      end
+    end
+    @result = text
   end
 end
