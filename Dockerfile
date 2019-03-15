@@ -6,5 +6,3 @@ RUN apt-get update -qq && \
 ARG appname=/my-mojiokoshi
 RUN mkdir ${appname}
 WORKDIR ${appname}
-COPY ./Gemfile ${appname}
-COPY ./Gemfile.lock ${appname}
