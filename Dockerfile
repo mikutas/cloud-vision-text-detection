@@ -1,4 +1,4 @@
-FROM ruby:2.5.3-slim-stretch
+FROM ruby:2.5.4-slim-stretch
 RUN apt-get update -qq && \
     apt-get install -y --no-install-recommends \
     build-essential libpq-dev libsqlite3-dev nodejs
