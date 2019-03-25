@@ -10,7 +10,7 @@ services:
       dockerfile: "Dockerfile"
     command: bin/rails s -p 3000 -b '0.0.0.0'
     volumes:
-      - .:/my-mojiokoshi
+      - .:/cloud-vision-text-detection
       - bundle_data:/usr/local/bundle
     ports:
       - "3000:3000"
