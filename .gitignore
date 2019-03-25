@@ -33,4 +33,4 @@
 /vendor/bundle
 
 # Ignore GCP service account key
-/config/my-mojiokoshi*.json
+/config/*.json
